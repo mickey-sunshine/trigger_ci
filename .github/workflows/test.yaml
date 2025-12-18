@@ -1,0 +1,60 @@
+name: Generate_netlist_manually
+on:
+  workflow_dispatch:
+    inputs:
+      VERSION:
+        description: 'Version (eg: v1.1.0)'
+        required: true
+        type: string
+        default: 'v1.1.0'
+jobs:
+  generate_netlist_centos:
+    runs-on: [self-hosted, Linux, X64, eda_cn]
+    
+    steps:
+      - name: Runner workspace path
+        run: |
+          echo "Cleaning up previous run"
+          rm -rf "${{ github.workspace }}"
+          mkdir -p "${{ github.workspace }}"
+          
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        
+      - name: Find Install Path
+        run: |
+          VERSION="${{ inputs.VERSION }}"
+          echo "Using version: $VERSION"
+          INSTALL_PATH=$(ls -d /rapidsilicon/data/aaee_engineer_version_install_path/*${VERSION}* 2>/dev/null | head -n 1)
+          if [ -z "$INSTALL_PATH" ]; then
+            echo "ERROR: Install path for version $VERSION not found!"
+            echo "Available versions:"
+            ls -d /rapidsilicon/data/aaee_engineer_version_install_path/* 2>/dev/null || echo "No versions found"
+            exit 1
+          fi
+          echo "Found install path: $INSTALL_PATH"
+          echo "INSTALL_PATH=$INSTALL_PATH" >> $GITHUB_ENV
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          
+      - name: Activate conda and run
+        id: run_arkangel
+        run: |
+          echo "conda activate eda" > "${{ github.workspace }}/scl_compile.sh"
+          echo "setenv PATH /rapidsilicon/data/ArkAngel_Engineering_${{ env.VERSION }}/bin:$PATH" >> "${{ github.workspace }}/scl_compile.sh"
+          echo "echo 'Running run.arkangel in work directory'" >> "${{ github.workspace }}/scl_compile.sh"
+          
+          mkdir -p "${{ github.workspace }}/work"
+          cp -r "${{ github.workspace }}/script/gen_netlist/config" "${{ github.workspace }}/work/"
+          
+          cd "${{ github.workspace }}/work"
+          echo "Running run.arkangel in work directory"
+          cat "${{ github.workspace }}/scl_compile.sh" | scl enable devtoolset-10 csh
+          scl enable devtoolset-10 csh -c "aaee -f ./config/run.arkangel"
+          
+      - name: Track netlists with Git
+        if: success()
+        run: |
+          cd "${{ github.workspace }}/work"
+          git add work/* # This will track all generated files in work directory
+          git commit -m "Add generated netlist files"
+          

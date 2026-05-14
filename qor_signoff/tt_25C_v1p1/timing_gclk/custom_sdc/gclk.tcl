@@ -1,0 +1,8 @@
+create_clock -name CLK_0 -period 10 -waveform {0 5} [get_ports "clk[0]"]
+create_clock -name CLK_1 -period 10 -waveform {0 5} [get_ports "clk[1]"]
+create_clock -name CLK_2 -period 10 -waveform {0 5} [get_ports "clk[2]"]
+create_clock -name CLK_3 -period 10 -waveform {0 5} [get_ports "clk[3]"]
+create_clock -name CLK_4 -period 10 -waveform {0 5} [get_ports "clk[4]"]
+create_clock -name CLK_5 -period 10 -waveform {0 5} [get_ports "clk[5]"]
+create_clock -name CLK_6 -period 10 -waveform {0 5} [get_ports "clk[6]"]
+create_clock -name CLK_7 -period 10 -waveform {0 5} [get_ports "clk[7]"]

@@ -1,0 +1,429 @@
+device:
+  name: alkaid
+  version: s40ulp
+technology:
+  root: ${PDK_ROOT}
+  corner:
+    pvt: tt_v1p1
+    rc: cn_25c
+    ocv: tt
+netlist:
+  root: ./netlist
+  exclude:
+    - fabric_netlists.v
+    - scc40ulp_uhdc40_hvt.v
+    - scc40ulp_uhdc40_lvt.v
+    - scc40ulp_uhdc40_rvt.v
+  type: gl
+  on_chip_variation: false
+rc_parasitics:
+  root: ./spef
+  include: false
+report_timing:
+  - name: clk_rise_latency_clk_rise_latencyclk_idx_sweep_0
+    current_design:
+      - fpga_top
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/clk_rise_latencyclk_idx_sweep_0.rpt
+    path:
+      from_pin:
+        - "[get_ports clk[0]]"
+      to_pin:
+        - "[get_pins fpga_core*/tile_*__*_/grid_clb*/*fle*/*ff*/*/CK*]"
+        - "[get_pins fpga_core*/tile_*__*_/grid_io*/*/*/*reg*/CK*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 1
+      max_paths: 1000
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_gclk/sdc/disable_comb_loops.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/gclk.tcl
+    bitstream:
+      base: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_base.xml
+      value: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_clk0_on.xml
+  - name: clk_rise_latency_clk_rise_latencyclk_idx_sweep_1
+    current_design:
+      - fpga_top
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/clk_rise_latencyclk_idx_sweep_1.rpt
+    path:
+      from_pin:
+        - "[get_ports clk[1]]"
+      to_pin:
+        - "[get_pins fpga_core*/tile_*__*_/grid_clb*/*fle*/*ff*/*/CK*]"
+        - "[get_pins fpga_core*/tile_*__*_/grid_io*/*/*/*reg*/CK*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 1
+      max_paths: 1000
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_gclk/sdc/disable_comb_loops.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/gclk.tcl
+    bitstream:
+      base: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_base.xml
+      value: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_clk1_on.xml
+  - name: clk_rise_latency_clk_rise_latencyclk_idx_sweep_2
+    current_design:
+      - fpga_top
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/clk_rise_latencyclk_idx_sweep_2.rpt
+    path:
+      from_pin:
+        - "[get_ports clk[2]]"
+      to_pin:
+        - "[get_pins fpga_core*/tile_*__*_/grid_clb*/*fle*/*ff*/*/CK*]"
+        - "[get_pins fpga_core*/tile_*__*_/grid_io*/*/*/*reg*/CK*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 1
+      max_paths: 1000
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_gclk/sdc/disable_comb_loops.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/gclk.tcl
+    bitstream:
+      base: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_base.xml
+      value: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_clk2_on.xml
+  - name: clk_rise_latency_clk_rise_latencyclk_idx_sweep_3
+    current_design:
+      - fpga_top
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/clk_rise_latencyclk_idx_sweep_3.rpt
+    path:
+      from_pin:
+        - "[get_ports clk[3]]"
+      to_pin:
+        - "[get_pins fpga_core*/tile_*__*_/grid_clb*/*fle*/*ff*/*/CK*]"
+        - "[get_pins fpga_core*/tile_*__*_/grid_io*/*/*/*reg*/CK*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 1
+      max_paths: 1000
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_gclk/sdc/disable_comb_loops.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/gclk.tcl
+    bitstream:
+      base: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_base.xml
+      value: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_clk3_on.xml
+  - name: clk_rise_latency_clk_rise_latencyclk_idx_sweep_4
+    current_design:
+      - fpga_top
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/clk_rise_latencyclk_idx_sweep_4.rpt
+    path:
+      from_pin:
+        - "[get_ports clk[4]]"
+      to_pin:
+        - "[get_pins fpga_core*/tile_*__*_/grid_clb*/*fle*/*ff*/*/CK*]"
+        - "[get_pins fpga_core*/tile_*__*_/grid_io*/*/*/*reg*/CK*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 1
+      max_paths: 1000
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_gclk/sdc/disable_comb_loops.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/gclk.tcl
+    bitstream:
+      base: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_base.xml
+      value: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_clk4_on.xml
+  - name: clk_rise_latency_clk_rise_latencyclk_idx_sweep_5
+    current_design:
+      - fpga_top
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/clk_rise_latencyclk_idx_sweep_5.rpt
+    path:
+      from_pin:
+        - "[get_ports clk[5]]"
+      to_pin:
+        - "[get_pins fpga_core*/tile_*__*_/grid_clb*/*fle*/*ff*/*/CK*]"
+        - "[get_pins fpga_core*/tile_*__*_/grid_io*/*/*/*reg*/CK*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 1
+      max_paths: 1000
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_gclk/sdc/disable_comb_loops.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/gclk.tcl
+    bitstream:
+      base: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_base.xml
+      value: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_clk5_on.xml
+  - name: clk_rise_latency_clk_rise_latencyclk_idx_sweep_6
+    current_design:
+      - fpga_top
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/clk_rise_latencyclk_idx_sweep_6.rpt
+    path:
+      from_pin:
+        - "[get_ports clk[6]]"
+      to_pin:
+        - "[get_pins fpga_core*/tile_*__*_/grid_clb*/*fle*/*ff*/*/CK*]"
+        - "[get_pins fpga_core*/tile_*__*_/grid_io*/*/*/*reg*/CK*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 1
+      max_paths: 1000
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_gclk/sdc/disable_comb_loops.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/gclk.tcl
+    bitstream:
+      base: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_base.xml
+      value: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_clk6_on.xml
+  - name: clk_rise_latency_clk_rise_latencyclk_idx_sweep_7
+    current_design:
+      - fpga_top
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/clk_rise_latencyclk_idx_sweep_7.rpt
+    path:
+      from_pin:
+        - "[get_ports clk[7]]"
+      to_pin:
+        - "[get_pins fpga_core*/tile_*__*_/grid_clb*/*fle*/*ff*/*/CK*]"
+        - "[get_pins fpga_core*/tile_*__*_/grid_io*/*/*/*reg*/CK*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 1
+      max_paths: 1000
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_gclk/sdc/disable_comb_loops.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/gclk.tcl
+    bitstream:
+      base: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_base.xml
+      value: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_clk7_on.xml
+  - name: clk_fall_latency_clk_fall_latencyclk_idx_sweep_0
+    current_design:
+      - fpga_top
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/clk_fall_latencyclk_idx_sweep_0.rpt
+    path:
+      from_pin:
+        - "[get_ports clk[0]]"
+      to_pin:
+        - "[get_pins fpga_core*/tile_*__*_/grid_clb*/*fle*/*ff*/*/CK*]"
+        - "[get_pins fpga_core*/tile_*__*_/grid_io*/*/*/*reg*/CK*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 1
+      max_paths: 1000
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_gclk/sdc/disable_comb_loops.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/gclk.tcl
+    bitstream:
+      base: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_base.xml
+      value: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_clk0_on.xml
+  - name: clk_fall_latency_clk_fall_latencyclk_idx_sweep_1
+    current_design:
+      - fpga_top
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/clk_fall_latencyclk_idx_sweep_1.rpt
+    path:
+      from_pin:
+        - "[get_ports clk[1]]"
+      to_pin:
+        - "[get_pins fpga_core*/tile_*__*_/grid_clb*/*fle*/*ff*/*/CK*]"
+        - "[get_pins fpga_core*/tile_*__*_/grid_io*/*/*/*reg*/CK*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 1
+      max_paths: 1000
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_gclk/sdc/disable_comb_loops.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/gclk.tcl
+    bitstream:
+      base: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_base.xml
+      value: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_clk1_on.xml
+  - name: clk_fall_latency_clk_fall_latencyclk_idx_sweep_2
+    current_design:
+      - fpga_top
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/clk_fall_latencyclk_idx_sweep_2.rpt
+    path:
+      from_pin:
+        - "[get_ports clk[2]]"
+      to_pin:
+        - "[get_pins fpga_core*/tile_*__*_/grid_clb*/*fle*/*ff*/*/CK*]"
+        - "[get_pins fpga_core*/tile_*__*_/grid_io*/*/*/*reg*/CK*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 1
+      max_paths: 1000
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_gclk/sdc/disable_comb_loops.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/gclk.tcl
+    bitstream:
+      base: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_base.xml
+      value: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_clk2_on.xml
+  - name: clk_fall_latency_clk_fall_latencyclk_idx_sweep_3
+    current_design:
+      - fpga_top
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/clk_fall_latencyclk_idx_sweep_3.rpt
+    path:
+      from_pin:
+        - "[get_ports clk[3]]"
+      to_pin:
+        - "[get_pins fpga_core*/tile_*__*_/grid_clb*/*fle*/*ff*/*/CK*]"
+        - "[get_pins fpga_core*/tile_*__*_/grid_io*/*/*/*reg*/CK*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 1
+      max_paths: 1000
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_gclk/sdc/disable_comb_loops.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/gclk.tcl
+    bitstream:
+      base: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_base.xml
+      value: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_clk3_on.xml
+  - name: clk_fall_latency_clk_fall_latencyclk_idx_sweep_4
+    current_design:
+      - fpga_top
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/clk_fall_latencyclk_idx_sweep_4.rpt
+    path:
+      from_pin:
+        - "[get_ports clk[4]]"
+      to_pin:
+        - "[get_pins fpga_core*/tile_*__*_/grid_clb*/*fle*/*ff*/*/CK*]"
+        - "[get_pins fpga_core*/tile_*__*_/grid_io*/*/*/*reg*/CK*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 1
+      max_paths: 1000
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_gclk/sdc/disable_comb_loops.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/gclk.tcl
+    bitstream:
+      base: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_base.xml
+      value: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_clk4_on.xml
+  - name: clk_fall_latency_clk_fall_latencyclk_idx_sweep_5
+    current_design:
+      - fpga_top
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/clk_fall_latencyclk_idx_sweep_5.rpt
+    path:
+      from_pin:
+        - "[get_ports clk[5]]"
+      to_pin:
+        - "[get_pins fpga_core*/tile_*__*_/grid_clb*/*fle*/*ff*/*/CK*]"
+        - "[get_pins fpga_core*/tile_*__*_/grid_io*/*/*/*reg*/CK*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 1
+      max_paths: 1000
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_gclk/sdc/disable_comb_loops.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/gclk.tcl
+    bitstream:
+      base: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_base.xml
+      value: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_clk5_on.xml
+  - name: clk_fall_latency_clk_fall_latencyclk_idx_sweep_6
+    current_design:
+      - fpga_top
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/clk_fall_latencyclk_idx_sweep_6.rpt
+    path:
+      from_pin:
+        - "[get_ports clk[6]]"
+      to_pin:
+        - "[get_pins fpga_core*/tile_*__*_/grid_clb*/*fle*/*ff*/*/CK*]"
+        - "[get_pins fpga_core*/tile_*__*_/grid_io*/*/*/*reg*/CK*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 1
+      max_paths: 1000
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_gclk/sdc/disable_comb_loops.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/gclk.tcl
+    bitstream:
+      base: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_base.xml
+      value: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_clk6_on.xml
+  - name: clk_fall_latency_clk_fall_latencyclk_idx_sweep_7
+    current_design:
+      - fpga_top
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/clk_fall_latencyclk_idx_sweep_7.rpt
+    path:
+      from_pin:
+        - "[get_ports clk[7]]"
+      to_pin:
+        - "[get_pins fpga_core*/tile_*__*_/grid_clb*/*fle*/*ff*/*/CK*]"
+        - "[get_pins fpga_core*/tile_*__*_/grid_io*/*/*/*reg*/CK*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 1
+      max_paths: 1000
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_gclk/sdc/disable_comb_loops.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/gclk.tcl
+    bitstream:
+      base: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_base.xml
+      value: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_gclk/custom_sdc/bitstream_clk7_on.xml
+timing_summary:
+  - name: clk_fall_latency
+    distribution:
+      table: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/clk_fall_latency_dist.csv
+      histogram: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/clk_fall_latency_dist.png
+    yaml:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_gclk_tt_25C_v1p1.yaml
+      append: false
+      variable:
+        - CLK_FALL_LATENCY
+      timing_data: arrival time
+      data_type: Max
+      scale_factor: 1
+    csv:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_gclk_tt_25C_v1p1.csv
+      append: false
+      variable:
+        - clk fall latency
+      timing_data: arrival time
+    timing_tasks:
+      - clk_fall_latency_clk_fall_latencyclk_idx_sweep_0
+      - clk_fall_latency_clk_fall_latencyclk_idx_sweep_1
+      - clk_fall_latency_clk_fall_latencyclk_idx_sweep_2
+      - clk_fall_latency_clk_fall_latencyclk_idx_sweep_3
+      - clk_fall_latency_clk_fall_latencyclk_idx_sweep_4
+      - clk_fall_latency_clk_fall_latencyclk_idx_sweep_5
+      - clk_fall_latency_clk_fall_latencyclk_idx_sweep_6
+      - clk_fall_latency_clk_fall_latencyclk_idx_sweep_7
+  - name: clk_rise_latency
+    distribution:
+      table: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/clk_rise_latency_dist.csv
+      histogram: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/clk_rise_latency_dist.png
+    yaml:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_gclk_tt_25C_v1p1.yaml
+      append: true
+      variable:
+        - CLK_RISE_LATENCY
+      timing_data: arrival time
+      data_type: Max
+      scale_factor: 1
+    csv:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_gclk_tt_25C_v1p1.csv
+      append: true
+      variable:
+        - clk rise latency
+      timing_data: arrival time
+    timing_tasks:
+      - clk_rise_latency_clk_rise_latencyclk_idx_sweep_0
+      - clk_rise_latency_clk_rise_latencyclk_idx_sweep_1
+      - clk_rise_latency_clk_rise_latencyclk_idx_sweep_2
+      - clk_rise_latency_clk_rise_latencyclk_idx_sweep_3
+      - clk_rise_latency_clk_rise_latencyclk_idx_sweep_4
+      - clk_rise_latency_clk_rise_latencyclk_idx_sweep_5
+      - clk_rise_latency_clk_rise_latencyclk_idx_sweep_6
+      - clk_rise_latency_clk_rise_latencyclk_idx_sweep_7

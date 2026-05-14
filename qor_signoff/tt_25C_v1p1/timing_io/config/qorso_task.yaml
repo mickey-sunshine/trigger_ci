@@ -1,0 +1,407 @@
+device:
+  name: alkaid
+  version: s40ulp
+technology:
+  root: ${PDK_ROOT}
+  corner:
+    pvt: tt_v1p1
+    rc: cn_25c
+    ocv: tt
+netlist:
+  root: ./netlist
+  exclude:
+    - fabric_netlists.v
+    - scc40ulp_uhdc40_hvt.v
+    - scc40ulp_uhdc40_lvt.v
+    - scc40ulp_uhdc40_rvt.v
+  type: gl
+  on_chip_variation: false
+rc_parasitics:
+  root: ./spef
+  include: false
+report_timing:
+  - name: io_a2f_to_fpga_in_delay_io_a2f_to_fpga_in
+    current_design:
+      - bottom_tile
+      - bottom_tile_right_edge
+      - left_tile_clock_above
+      - left_tile_clock_below
+      - left_tile_clock_out
+      - left_tile_main
+      - left_tile_sub
+      - right_tile_main
+      - right_tile_sub
+      - top_tile
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/io_a2f_to_fpga_in.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_io_*/gfpga_pad_pinput_*A2F*]"
+      to_pin:
+        - "[get_pins grid_io_*/*pin_a2f_o_*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 1
+      max_paths: 1000
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_io/sdc/tile_disable_timing.tcl
+  - name: io_a2f_to_ff_delay_io_a2f_to_ff
+    current_design:
+      - bottom_tile
+      - bottom_tile_right_edge
+      - left_tile_clock_above
+      - left_tile_clock_below
+      - left_tile_clock_out
+      - left_tile_main
+      - left_tile_sub
+      - right_tile_main
+      - right_tile_sub
+      - top_tile
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/io_a2f_to_ff.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_io_*/gfpga_pad_pinput_*A2F*]"
+      to_pin:
+        - "[get_pins grid_io_*/*io_pi*/*/*/D*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 1
+      max_paths: 1000
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_io/sdc/tile_disable_timing.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_io/sdc/tile_disable_routing_timing.tcl
+  - name: io_ff2fpga_in_delay_io_ff2fpga_in
+    current_design:
+      - bottom_tile
+      - bottom_tile_right_edge
+      - left_tile_clock_above
+      - left_tile_clock_below
+      - left_tile_clock_out
+      - left_tile_main
+      - left_tile_sub
+      - right_tile_main
+      - right_tile_sub
+      - top_tile
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/io_ff2fpga_in.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_io_*/*io_pi*/*ff*/*/Q*]"
+      to_pin:
+        - "[get_pins grid_io_*/*pin_a2f_o_*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 1
+      max_paths: 1000
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_io/sdc/tile_disable_timing.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_io/sdc/tile_disable_routing_timing.tcl
+  - name: io_fpga_out_to_f2a_delay_io_fpga_out_to_f2a
+    current_design:
+      - bottom_tile
+      - bottom_tile_right_edge
+      - left_tile_clock_above
+      - left_tile_clock_below
+      - left_tile_clock_out
+      - left_tile_main
+      - left_tile_sub
+      - right_tile_main
+      - right_tile_sub
+      - top_tile
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/io_fpga_out_to_f2a.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_io_*/*pin_f2a_i*]"
+      to_pin:
+        - "[get_pins grid_io_*/*gfpga_pad_poutput_F2A*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 1
+      max_paths: 1000
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_io/sdc/tile_disable_timing.tcl
+  - name: io_fpga_out_to_ff_delay_io_fpga_out2ff
+    current_design:
+      - bottom_tile
+      - bottom_tile_right_edge
+      - left_tile_clock_above
+      - left_tile_clock_below
+      - left_tile_clock_out
+      - left_tile_main
+      - left_tile_sub
+      - right_tile_main
+      - right_tile_sub
+      - top_tile
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/io_fpga_out2ff.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_io_*/*pin_f2a_i_*]"
+      to_pin:
+        - "[get_pins grid_io_*/*io_po*/*ff*/*/D*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 1
+      max_paths: 1000
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_io/sdc/tile_disable_timing.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_io/sdc/tile_disable_routing_timing.tcl
+  - name: io_ff_to_fpga_out_delay_io_ff_to_f2a
+    current_design:
+      - bottom_tile
+      - bottom_tile_right_edge
+      - left_tile_clock_above
+      - left_tile_clock_below
+      - left_tile_clock_out
+      - left_tile_main
+      - left_tile_sub
+      - right_tile_main
+      - right_tile_sub
+      - top_tile
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/io_ff_to_f2a.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_io_*/*io_po*/*ff*/*/Q*]"
+      to_pin:
+        - "[get_pins grid_io_*/gfpga_pad_poutput_F2A*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 1
+      max_paths: 1000
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_io/sdc/tile_disable_timing.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_io/sdc/tile_disable_routing_timing.tcl
+  - name: io_clk_mux_delay_io_clk_mux
+    current_design:
+      - bottom_tile
+      - bottom_tile_right_edge
+      - left_tile_clock_above
+      - left_tile_clock_below
+      - left_tile_clock_out
+      - left_tile_main
+      - left_tile_sub
+      - right_tile_main
+      - right_tile_sub
+      - top_tile
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/io_clk_mux.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_io_*/*pin_clk*]"
+      to_pin:
+        - "[get_pins grid_io_*/*io_pi*/*ff*/*/CK*]"
+        - "[get_pins grid_io_*/*io_po*/*ff*/*/CK*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 1
+      max_paths: 100
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_io/sdc/tile_disable_timing.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_io/sdc/tile_disable_routing_timing.tcl
+  - name: io_rst_mux_delay_io_rst_mux
+    current_design:
+      - bottom_tile
+      - bottom_tile_right_edge
+      - left_tile_clock_above
+      - left_tile_clock_below
+      - left_tile_clock_out
+      - left_tile_main
+      - left_tile_sub
+      - right_tile_main
+      - right_tile_sub
+      - top_tile
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/io_rst_mux.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_io_*/*pin_reset*]"
+      to_pin:
+        - "[get_pins grid_io_*/*io_pi*/*ff*/*/R*]"
+        - "[get_pins grid_io_*/*io_po*/*ff*/*/R*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 1
+      max_paths: 100
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_io/sdc/tile_disable_timing.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_io/sdc/tile_disable_routing_timing.tcl
+timing_summary:
+  - name: io_a2f_to_ff_delay
+    distribution:
+      table: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/io_a2f_to_ff_delay_dist.csv
+      histogram: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/io_a2f_to_ff_delay_dist.png
+    yaml:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_io_tt_25C_v1p1.yaml
+      append: false
+      variable:
+        - IO_I2FF_DELAY
+      timing_data: arrival time
+      data_type: Max
+      scale_factor: 2.19
+    csv:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_io_tt_25C_v1p1.csv
+      append: false
+      variable:
+        - A2F->IO FF
+      timing_data: arrival time
+    timing_tasks:
+      - io_a2f_to_ff_delay_io_a2f_to_ff
+  - name: io_a2f_to_fpga_in_delay
+    distribution:
+      table: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/io_a2f_to_fpga_in_delay_dist.csv
+      histogram: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/io_a2f_to_fpga_in_delay_dist.png
+    yaml:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_io_tt_25C_v1p1.yaml
+      append: true
+      variable:
+        - IO_INPAD_MAX_DELAY
+        - IO_INPAD_MIN_DELAY
+      timing_data: arrival time
+      data_type: Max
+      scale_factor: 4.12
+    csv:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_io_tt_25C_v1p1.csv
+      append: true
+      variable:
+        - A2F->fpga_in Max
+        - A2F->fpga_in Min
+      timing_data: arrival time
+    timing_tasks:
+      - io_a2f_to_fpga_in_delay_io_a2f_to_fpga_in
+  - name: io_clk_mux_delay
+    distribution:
+      table: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/io_clk_mux_delay_dist.csv
+      histogram: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/io_clk_mux_delay_dist.png
+    yaml:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_io_tt_25C_v1p1.yaml
+      append: true
+      variable:
+        - IO_CLK_MAX_DELAY
+      timing_data: arrival time
+      data_type: Max
+      scale_factor: 1.95
+    csv:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_io_tt_25C_v1p1.csv
+      append: true
+      variable:
+        - I/O clock mux
+      timing_data: arrival time
+    timing_tasks:
+      - io_clk_mux_delay_io_clk_mux
+  - name: io_ff2fpga_in_delay
+    distribution:
+      table: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/io_ff2fpga_in_delay_dist.csv
+      histogram: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/io_ff2fpga_in_delay_dist.png
+    yaml:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_io_tt_25C_v1p1.yaml
+      append: true
+      variable:
+        - IO_FF2I_MAX_DELAY
+        - IO_FF2I_MIN_DELAY
+      timing_data: arrival time
+      data_type: Max
+      scale_factor: 1.09
+    csv:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_io_tt_25C_v1p1.csv
+      append: true
+      variable:
+        - ff->fpga_in Max
+        - ff->fpga_in Min
+      timing_data: arrival time
+    timing_tasks:
+      - io_ff2fpga_in_delay_io_ff2fpga_in
+  - name: io_ff_to_fpga_out_delay
+    distribution:
+      table: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/io_ff_to_fpga_out_delay_dist.csv
+      histogram: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/io_ff_to_fpga_out_delay_dist.png
+    yaml:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_io_tt_25C_v1p1.yaml
+      append: true
+      variable:
+        - IO_FF2O_MAX_DELAY
+        - IO_FF2O_MIN_DELAY
+      timing_data: arrival time
+      data_type: Max
+      scale_factor: 2.68
+    csv:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_io_tt_25C_v1p1.csv
+      append: true
+      variable:
+        - ff->F2A Max
+        - ff->F2A Min
+      timing_data: arrival time
+    timing_tasks:
+      - io_ff_to_fpga_out_delay_io_ff_to_f2a
+  - name: io_fpga_out_to_f2a_delay
+    distribution:
+      table: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/io_fpga_out_to_f2a_delay_dist.csv
+      histogram: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/io_fpga_out_to_f2a_delay_dist.png
+    yaml:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_io_tt_25C_v1p1.yaml
+      append: true
+      variable:
+        - IO_OUTPAD_MAX_DELAY
+        - IO_OUTPAD_MIN_DELAY
+      timing_data: arrival time
+      data_type: Max
+      scale_factor: 2.11
+    csv:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_io_tt_25C_v1p1.csv
+      append: true
+      variable:
+        - fpga_out->F2A Max
+        - fpga_out->F2A Min
+      timing_data: arrival time
+    timing_tasks:
+      - io_fpga_out_to_f2a_delay_io_fpga_out_to_f2a
+  - name: io_fpga_out_to_ff_delay
+    distribution:
+      table: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/io_fpga_out_to_ff_delay_dist.csv
+      histogram: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/io_fpga_out_to_ff_delay_dist.png
+    yaml:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_io_tt_25C_v1p1.yaml
+      append: true
+      variable:
+        - IO_FPGA_OUT2FF_DELAY
+      timing_data: arrival time
+      data_type: Max
+      scale_factor: 1.88
+    csv:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_io_tt_25C_v1p1.csv
+      append: true
+      variable:
+        - fpga.out->ff
+      timing_data: arrival time
+    timing_tasks:
+      - io_fpga_out_to_ff_delay_io_fpga_out2ff
+  - name: io_rst_mux_delay
+    distribution:
+      table: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/io_rst_mux_delay_dist.csv
+      histogram: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/io_rst_mux_delay_dist.png
+    yaml:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_io_tt_25C_v1p1.yaml
+      append: true
+      variable:
+        - IO_RST_MAX_DELAY
+      timing_data: arrival time
+      data_type: Max
+      scale_factor: 2
+    csv:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_io_tt_25C_v1p1.csv
+      append: true
+      variable:
+        - I/O reset mux
+      timing_data: arrival time
+    timing_tasks:
+      - io_rst_mux_delay_io_rst_mux

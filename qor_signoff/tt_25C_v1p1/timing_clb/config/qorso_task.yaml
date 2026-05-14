@@ -1,0 +1,628 @@
+device:
+  name: alkaid
+  version: s40ulp
+technology:
+  root: ${PDK_ROOT}
+  corner:
+    pvt: tt_v1p1
+    rc: cn_25c
+    ocv: tt
+netlist:
+  root: ./netlist
+  exclude:
+    - fabric_netlists.v
+    - scc40ulp_uhdc40_hvt.v
+    - scc40ulp_uhdc40_lvt.v
+    - scc40ulp_uhdc40_rvt.v
+  type: gl
+  on_chip_variation: false
+rc_parasitics:
+  root: ./spef
+  include: false
+report_timing:
+  - name: clb_ff_t_setup_module_clb_clk2ff
+    current_design:
+      - tile_main
+      - tile_right_edge_main
+      - tile_right_edge_sub
+      - tile_sub
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/module_clb_clk2ff.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_clb_*__*_/*clk*]"
+      to_pin:
+        - "[get_pins grid_clb_*__*_/*fle*/*ff*/*/CK*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 1
+      max_paths: 1000
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_disable_timing.sdc
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_remove_xbar_disable_timing.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_carry_disable_timing.tcl
+  - name: lut4_delay_module_clb_lut4
+    current_design:
+      - tile_main
+      - tile_right_edge_main
+      - tile_right_edge_sub
+      - tile_sub
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/module_clb_lut4.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_clb_*__*_/*fle*/fle_in*]"
+      to_pin:
+        - "[get_pins grid_clb_*__*_/*fle*/*frac_logic*/frac_logic_out[1]]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 100
+      max_paths: 100
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_disable_timing.sdc
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_remove_xbar_disable_timing.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_conkt_lut2fleout.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_carry_disable_timing.tcl
+  - name: lut5_delay_module_clb_lut5
+    current_design:
+      - tile_main
+      - tile_right_edge_main
+      - tile_right_edge_sub
+      - tile_sub
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/module_clb_lut5.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_clb_*__*_/*fle*/fle_in*]"
+      to_pin:
+        - "[get_pins grid_clb_*__*_/*fle*/*frac_logic*/frac_logic_out[0]]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 100
+      max_paths: 100
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_disable_timing.sdc
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_remove_xbar_disable_timing.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_conkt_lut2fleout.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_carry_disable_timing.tcl
+  - name: lut_out0_to_ff_d_delay_module_clb_lut2ff
+    current_design:
+      - tile_main
+      - tile_right_edge_main
+      - tile_right_edge_sub
+      - tile_sub
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/module_clb_lut2ff.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_clb_*__*_/*fle*/fle_in*]"
+      to_pin:
+        - "[get_pins grid_clb_*__*_/*fle*/*frac_logic*/frac_logic_out[0]]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 100
+      max_paths: 100
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_disable_timing.sdc
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_remove_xbar_disable_timing.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_conkt_lut2fleout.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_carry_disable_timing.tcl
+  - name: lut_out_to_fle_out_delay_module_clb_lut2leout
+    current_design:
+      - tile_main
+      - tile_right_edge_main
+      - tile_right_edge_sub
+      - tile_sub
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/module_clb_lut2leout.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_clb_*__*_/*fle*/*frac_logic*/frac_logic_out*]"
+      to_pin:
+        - "[get_pins grid_clb_*__*_/*fle*/*fle_out*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 100
+      max_paths: 100
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_disable_timing.sdc
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_xbar_disable_timing.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_carry_disable_timing.tcl
+  - name: lut_out_to_fle_out_delay_module_clb_ff2leout
+    current_design:
+      - tile_main
+      - tile_right_edge_main
+      - tile_right_edge_sub
+      - tile_sub
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/module_clb_ff2leout.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_clb_*__*_/*fle*/*ff*/*/Q*]"
+      to_pin:
+        - "[get_pins grid_clb_*__*_/*fle*/*fle_out*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 100
+      max_paths: 100
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_disable_timing.sdc
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_xbar_disable_timing.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_carry_disable_timing.tcl
+  - name: cin_to_cout_delay_module_clb_first_fle_cin2out
+    current_design:
+      - tile_main
+      - tile_right_edge_main
+      - tile_right_edge_sub
+      - tile_sub
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/module_clb_first_fle_cin2out.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_clb_*__*_/*cin*]"
+      to_pin:
+        - "[get_pins grid_clb_*__*_/*fle_0*/fle_cout*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 100
+      max_paths: 100
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_disable_timing.sdc
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_xbar_disable_timing.tcl
+  - name: cin_to_cout_delay_module_clb_last_fle_cin2out
+    current_design:
+      - tile_main
+      - tile_right_edge_main
+      - tile_right_edge_sub
+      - tile_sub
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/module_clb_last_fle_cin2out.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_clb_*__*_/*fle_11*/fle_cin*]"
+      to_pin:
+        - "[get_pins grid_clb_*__*_/*cout*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 100
+      max_paths: 100
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_disable_timing.sdc
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_xbar_disable_timing.tcl
+  - name: cin_to_cout_delay_module_clb_fle1_cin2outfle_idx_cin2cout_sweep_1
+    current_design:
+      - tile_main
+      - tile_right_edge_main
+      - tile_right_edge_sub
+      - tile_sub
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/module_clb_fle1_cin2outfle_idx_cin2cout_sweep_1.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_clb_*__*_/*fle_1/fle_cin*]"
+      to_pin:
+        - "[get_pins grid_clb_*__*_/*fle_1/fle_cout*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 100
+      max_paths: 100
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_disable_timing.sdc
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_xbar_disable_timing.tcl
+  - name: cin_to_cout_delay_module_clb_fle1_cin2outfle_idx_cin2cout_sweep_2
+    current_design:
+      - tile_main
+      - tile_right_edge_main
+      - tile_right_edge_sub
+      - tile_sub
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/module_clb_fle1_cin2outfle_idx_cin2cout_sweep_2.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_clb_*__*_/*fle_2/fle_cin*]"
+      to_pin:
+        - "[get_pins grid_clb_*__*_/*fle_2/fle_cout*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 100
+      max_paths: 100
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_disable_timing.sdc
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_xbar_disable_timing.tcl
+  - name: cin_to_cout_delay_module_clb_fle1_cin2outfle_idx_cin2cout_sweep_3
+    current_design:
+      - tile_main
+      - tile_right_edge_main
+      - tile_right_edge_sub
+      - tile_sub
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/module_clb_fle1_cin2outfle_idx_cin2cout_sweep_3.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_clb_*__*_/*fle_3/fle_cin*]"
+      to_pin:
+        - "[get_pins grid_clb_*__*_/*fle_3/fle_cout*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 100
+      max_paths: 100
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_disable_timing.sdc
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_xbar_disable_timing.tcl
+  - name: cin_to_cout_delay_module_clb_fle1_cin2outfle_idx_cin2cout_sweep_4
+    current_design:
+      - tile_main
+      - tile_right_edge_main
+      - tile_right_edge_sub
+      - tile_sub
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/module_clb_fle1_cin2outfle_idx_cin2cout_sweep_4.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_clb_*__*_/*fle_4/fle_cin*]"
+      to_pin:
+        - "[get_pins grid_clb_*__*_/*fle_4/fle_cout*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 100
+      max_paths: 100
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_disable_timing.sdc
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_xbar_disable_timing.tcl
+  - name: cin_to_cout_delay_module_clb_fle1_cin2outfle_idx_cin2cout_sweep_5
+    current_design:
+      - tile_main
+      - tile_right_edge_main
+      - tile_right_edge_sub
+      - tile_sub
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/module_clb_fle1_cin2outfle_idx_cin2cout_sweep_5.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_clb_*__*_/*fle_5/fle_cin*]"
+      to_pin:
+        - "[get_pins grid_clb_*__*_/*fle_5/fle_cout*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 100
+      max_paths: 100
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_disable_timing.sdc
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_xbar_disable_timing.tcl
+  - name: cin_to_cout_delay_module_clb_fle1_cin2outfle_idx_cin2cout_sweep_6
+    current_design:
+      - tile_main
+      - tile_right_edge_main
+      - tile_right_edge_sub
+      - tile_sub
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/module_clb_fle1_cin2outfle_idx_cin2cout_sweep_6.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_clb_*__*_/*fle_6/fle_cin*]"
+      to_pin:
+        - "[get_pins grid_clb_*__*_/*fle_6/fle_cout*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 100
+      max_paths: 100
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_disable_timing.sdc
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_xbar_disable_timing.tcl
+  - name: cin_to_cout_delay_module_clb_fle1_cin2outfle_idx_cin2cout_sweep_7
+    current_design:
+      - tile_main
+      - tile_right_edge_main
+      - tile_right_edge_sub
+      - tile_sub
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/module_clb_fle1_cin2outfle_idx_cin2cout_sweep_7.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_clb_*__*_/*fle_7/fle_cin*]"
+      to_pin:
+        - "[get_pins grid_clb_*__*_/*fle_7/fle_cout*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 100
+      max_paths: 100
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_disable_timing.sdc
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_xbar_disable_timing.tcl
+  - name: cin_to_cout_delay_module_clb_fle1_cin2outfle_idx_cin2cout_sweep_8
+    current_design:
+      - tile_main
+      - tile_right_edge_main
+      - tile_right_edge_sub
+      - tile_sub
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/module_clb_fle1_cin2outfle_idx_cin2cout_sweep_8.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_clb_*__*_/*fle_8/fle_cin*]"
+      to_pin:
+        - "[get_pins grid_clb_*__*_/*fle_8/fle_cout*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 100
+      max_paths: 100
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_disable_timing.sdc
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_xbar_disable_timing.tcl
+  - name: cin_to_cout_delay_module_clb_fle1_cin2outfle_idx_cin2cout_sweep_9
+    current_design:
+      - tile_main
+      - tile_right_edge_main
+      - tile_right_edge_sub
+      - tile_sub
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/module_clb_fle1_cin2outfle_idx_cin2cout_sweep_9.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_clb_*__*_/*fle_9/fle_cin*]"
+      to_pin:
+        - "[get_pins grid_clb_*__*_/*fle_9/fle_cout*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 100
+      max_paths: 100
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_disable_timing.sdc
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_xbar_disable_timing.tcl
+  - name: cin_to_cout_delay_module_clb_fle1_cin2outfle_idx_cin2cout_sweep_10
+    current_design:
+      - tile_main
+      - tile_right_edge_main
+      - tile_right_edge_sub
+      - tile_sub
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/module_clb_fle1_cin2outfle_idx_cin2cout_sweep_10.rpt
+    path:
+      from_pin:
+        - "[get_pins grid_clb_*__*_/*fle_10/fle_cin*]"
+      to_pin:
+        - "[get_pins grid_clb_*__*_/*fle_10/fle_cout*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 100
+      max_paths: 100
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_disable_timing.sdc
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_xbar_disable_timing.tcl
+  - name: clb_clk_mux_module_clb_clk_mux
+    current_design:
+      - tile_main
+      - tile_right_edge_main
+      - tile_right_edge_sub
+      - tile_sub
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/module_clb_clk_mux.rpt
+    path:
+      from_pin:
+        - "[get_pins cby_*__*_/chan*_in*]"
+      to_pin:
+        - "[get_pins grid_clb_*__*_/*pin_clk*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 100
+      max_paths: 100
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_disable_timing.sdc
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_remove_xbar_disable_timing.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_carry_disable_timing.tcl
+  - name: clb_rst_mux_module_clb_rst_mux
+    current_design:
+      - tile_main
+      - tile_right_edge_main
+      - tile_right_edge_sub
+      - tile_sub
+    report_file: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/[current_design]/module_clb_rst_mux.rpt
+    path:
+      from_pin:
+        - "[get_pins cby_*__*_/chan*_in*]"
+      to_pin:
+        - "[get_pins grid_clb_*__*_/*pin_reset*]"
+      max_delay: 0
+      min_delay: 100
+      delay_type: comb_max
+      clock_group: CLK0
+      nworst: 100
+      max_paths: 100
+    sdc:
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_disable_timing.sdc
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_remove_xbar_disable_timing.tcl
+      - /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_clb/sdc/tile_carry_disable_timing.tcl
+timing_summary:
+  - name: cin_to_cout_delay
+    distribution:
+      table: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/cin_to_cout_delay_dist.csv
+      histogram: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/cin_to_cout_delay_dist.png
+    yaml:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_clb_tt_25C_v1p1.yaml
+      append: false
+      variable:
+        - ADDER_C2C_DELAY
+      timing_data: arrival time
+      data_type: Max
+      scale_factor: 2.24
+    csv:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_clb_tt_25C_v1p1.csv
+      append: false
+      variable:
+        - le.cin->le.cout
+      timing_data: arrival time
+    timing_tasks:
+      - cin_to_cout_delay_module_clb_first_fle_cin2out
+      - cin_to_cout_delay_module_clb_fle1_cin2outfle_idx_cin2cout_sweep_1
+      - cin_to_cout_delay_module_clb_fle1_cin2outfle_idx_cin2cout_sweep_2
+      - cin_to_cout_delay_module_clb_fle1_cin2outfle_idx_cin2cout_sweep_3
+      - cin_to_cout_delay_module_clb_fle1_cin2outfle_idx_cin2cout_sweep_4
+      - cin_to_cout_delay_module_clb_fle1_cin2outfle_idx_cin2cout_sweep_5
+      - cin_to_cout_delay_module_clb_fle1_cin2outfle_idx_cin2cout_sweep_6
+      - cin_to_cout_delay_module_clb_fle1_cin2outfle_idx_cin2cout_sweep_7
+      - cin_to_cout_delay_module_clb_fle1_cin2outfle_idx_cin2cout_sweep_8
+      - cin_to_cout_delay_module_clb_fle1_cin2outfle_idx_cin2cout_sweep_9
+      - cin_to_cout_delay_module_clb_fle1_cin2outfle_idx_cin2cout_sweep_10
+      - cin_to_cout_delay_module_clb_last_fle_cin2out
+  - name: clb_clk_mux
+    distribution:
+      table: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/clb_clk_mux_dist.csv
+      histogram: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/clb_clk_mux_dist.png
+    yaml:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_clb_tt_25C_v1p1.yaml
+      append: true
+      variable:
+        - CLB_CLK_MUX
+      timing_data: required time
+      data_type: Max
+      scale_factor: 1.95
+    csv:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_clb_tt_25C_v1p1.csv
+      append: true
+      variable:
+        - clb clk mux
+      timing_data: required time
+    timing_tasks:
+      - clb_clk_mux_module_clb_clk_mux
+  - name: clb_ff_t_setup
+    distribution:
+      table: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/clb_ff_t_setup_dist.csv
+      histogram: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/clb_ff_t_setup_dist.png
+    yaml:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_clb_tt_25C_v1p1.yaml
+      append: true
+      variable:
+        - FF_T_SETUP
+      timing_data: required time
+      data_type: Max
+      scale_factor: 1
+    csv:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_clb_tt_25C_v1p1.csv
+      append: true
+      variable:
+        - ff t_setup
+      timing_data: required time
+    timing_tasks:
+      - clb_ff_t_setup_module_clb_clk2ff
+  - name: clb_rst_mux
+    distribution:
+      table: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/clb_rst_mux_dist.csv
+      histogram: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/clb_rst_mux_dist.png
+    yaml:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_clb_tt_25C_v1p1.yaml
+      append: true
+      variable:
+        - CLB_RST_MUX
+      timing_data: required time
+      data_type: Max
+      scale_factor: 2
+    csv:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_clb_tt_25C_v1p1.csv
+      append: true
+      variable:
+        - clb rst mux
+      timing_data: required time
+    timing_tasks:
+      - clb_rst_mux_module_clb_rst_mux
+  - name: lut4_delay
+    distribution:
+      table: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/lut4_delay_dist.csv
+      histogram: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/lut4_delay_dist.png
+    yaml:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_clb_tt_25C_v1p1.yaml
+      append: true
+      variable:
+        - LUT4_DELAY
+      timing_data: arrival time
+      data_type: Max
+      scale_factor: 1.69
+    csv:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_clb_tt_25C_v1p1.csv
+      append: true
+      variable:
+        - in->lut4.out
+      timing_data: arrival time
+    timing_tasks:
+      - lut4_delay_module_clb_lut4
+  - name: lut5_delay
+    distribution:
+      table: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/lut5_delay_dist.csv
+      histogram: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/lut5_delay_dist.png
+    yaml:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_clb_tt_25C_v1p1.yaml
+      append: true
+      variable:
+        - LUT5_DELAY
+      timing_data: arrival time
+      data_type: Max
+      scale_factor: 1.57
+    csv:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_clb_tt_25C_v1p1.csv
+      append: true
+      variable:
+        - in->lut5.out
+      timing_data: arrival time
+    timing_tasks:
+      - lut5_delay_module_clb_lut5
+  - name: lut_out0_to_ff_d_delay
+    distribution:
+      table: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/lut_out0_to_ff_d_delay_dist.csv
+      histogram: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/lut_out0_to_ff_d_delay_dist.png
+    yaml:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_clb_tt_25C_v1p1.yaml
+      append: true
+      variable:
+        - LUT_OUT_TO_FF_D_DELAY
+      timing_data: arrival time
+      data_type: Max
+      scale_factor: 1.62
+    csv:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_clb_tt_25C_v1p1.csv
+      append: true
+      variable:
+        - lut.out->ff.D
+      timing_data: arrival time
+    timing_tasks:
+      - lut_out0_to_ff_d_delay_module_clb_lut2ff
+  - name: lut_out_to_fle_out_delay
+    distribution:
+      table: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/lut_out_to_fle_out_delay_dist.csv
+      histogram: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/lut_out_to_fle_out_delay_dist.png
+    yaml:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_clb_tt_25C_v1p1.yaml
+      append: true
+      variable:
+        - LUT4_OUT_TO_FLE_OUT_DELAY
+        - LUT5_OUT_TO_FLE_OUT_DELAY
+      timing_data: arrival time
+      data_type: Max
+      scale_factor: 2.24
+    csv:
+      name: /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/summary/gl/tt_25C_v1p1/timing_timing_clb_tt_25C_v1p1.csv
+      append: true
+      variable:
+        - lut4.out->le.out
+        - lut5.out->le.out
+      timing_data: arrival time
+    timing_tasks:
+      - lut_out_to_fle_out_delay_module_clb_ff2leout
+      - lut_out_to_fle_out_delay_module_clb_lut2leout

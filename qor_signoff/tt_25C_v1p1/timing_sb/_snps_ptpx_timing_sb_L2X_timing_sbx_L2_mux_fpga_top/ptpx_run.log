@@ -1,0 +1,396 @@
+
+                                 PrimeTime (R)
+
+                 Version T-2022.03 for linux64 - Feb 27, 2022 
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+# Application Variables
+set timing_report_unconstrained_paths true
+true
+# Global paths
+set search_path "* /eda/internal/alkaid_infra/pdk/s40/s40ulp/std_cell/SCC40ULP_UHDC40_HVT/V0p2/liberty/1.1v /eda/internal/alkaid_infra/pdk/s40/s40ulp/std_cell/SCC40ULP_UHDC40_LVT/V0p2/liberty/1.1v /eda/internal/alkaid_infra/pdk/s40/s40ulp/std_cell/SCC40ULP_UHDC40_RVT_V0p2/liberty/1.1v"
+* /eda/internal/alkaid_infra/pdk/s40/s40ulp/std_cell/SCC40ULP_UHDC40_HVT/V0p2/liberty/1.1v /eda/internal/alkaid_infra/pdk/s40/s40ulp/std_cell/SCC40ULP_UHDC40_LVT/V0p2/liberty/1.1v /eda/internal/alkaid_infra/pdk/s40/s40ulp/std_cell/SCC40ULP_UHDC40_RVT_V0p2/liberty/1.1v
+set link_path "* scc40ulp_uhdc40_hvt_tt_v1p1_25c_basic.db scc40ulp_uhdc40_lvt_tt_v1p1_25c_basic.db scc40ulp_uhdc40_rvt_tt_v1p1_25c_basic.db"
+* scc40ulp_uhdc40_hvt_tt_v1p1_25c_basic.db scc40ulp_uhdc40_lvt_tt_v1p1_25c_basic.db scc40ulp_uhdc40_rvt_tt_v1p1_25c_basic.db
+# Local Variables
+# Read technology files
+read_db /eda/internal/alkaid_infra/pdk/s40/s40ulp/std_cell/SCC40ULP_UHDC40_HVT/V0p2/liberty/1.1v/scc40ulp_uhdc40_hvt_tt_v1p1_25c_basic.db
+Loading db file '/eda/internal/alkaid_infra/pdk/s40/s40ulp/std_cell/SCC40ULP_UHDC40_HVT/V0p2/liberty/1.1v/scc40ulp_uhdc40_hvt_tt_v1p1_25c_basic.db'
+1
+read_db /eda/internal/alkaid_infra/pdk/s40/s40ulp/std_cell/SCC40ULP_UHDC40_LVT/V0p2/liberty/1.1v/scc40ulp_uhdc40_lvt_tt_v1p1_25c_basic.db
+Loading db file '/eda/internal/alkaid_infra/pdk/s40/s40ulp/std_cell/SCC40ULP_UHDC40_LVT/V0p2/liberty/1.1v/scc40ulp_uhdc40_lvt_tt_v1p1_25c_basic.db'
+1
+read_db /eda/internal/alkaid_infra/pdk/s40/s40ulp/std_cell/SCC40ULP_UHDC40_RVT_V0p2/liberty/1.1v/scc40ulp_uhdc40_rvt_tt_v1p1_25c_basic.db
+Loading db file '/eda/internal/alkaid_infra/pdk/s40/s40ulp/std_cell/SCC40ULP_UHDC40_RVT_V0p2/liberty/1.1v/scc40ulp_uhdc40_rvt_tt_v1p1_25c_basic.db'
+1
+# Read design files
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/fpga_core.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/fpga_top.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cby_5_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cbx_3_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cby_6_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/grid_io_rightL_right.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cbx_2_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/sb_11_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/sb_4_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/sb_3_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cby_3_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/sb_2_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cby_4_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/sb_9_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/sb_8_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/sb_7_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/direct_interc.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cbx_4_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/grid_io_bottomL_bottom.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/sb_13_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cby_2_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/sb_1_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/grid_clb.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/sb_0_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/grid_io_leftL_left.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cbx_1_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cby_7_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cbx_6_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cby_0_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/grid_io_topL_top.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/sb_5_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/sb_12_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cby_1_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cbx_0_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cbx_5_.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/bottom_right_tile.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/left_bottom_tile.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/left_tile_clock_out.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/tile_sub.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/top_left_tile.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/bottom_tile_right_edge.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/left_tile_sub.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/tile_right_edge_sub.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/tile_right_edge_main.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/left_tile_main.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/left_tile_clock_above.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/tile_main.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/bottom_tile.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/top_tile.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/left_tile_clock_below.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/right_tile_sub.v
+1
+read_verilog /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/right_tile_main.v
+1
+link_design fpga_top
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cby_6_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cby_7_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/fpga_core.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cby_3_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cby_4_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/grid_clb.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/sb_9_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/sb_8_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/sb_3_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/sb_12_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/sb_4_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/sb_2_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/sb_1_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/sb_11_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/sb_7_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cby_5_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/sb_13_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cby_1_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/grid_io_topL_top.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/sb_0_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/grid_io_leftL_left.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/sb_5_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/grid_io_bottomL_bottom.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cbx_4_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cbx_6_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/grid_io_rightL_right.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cby_2_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cbx_3_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cbx_5_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/tile_right_edge_sub.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/tile_sub.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/tile_right_edge_main.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/left_tile_sub.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/top_tile.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/left_tile_clock_out.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/left_tile_clock_above.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/left_tile_clock_below.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/left_tile_main.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/tile_main.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cbx_2_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/bottom_tile_right_edge.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/bottom_tile.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/right_tile_main.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/right_tile_sub.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cbx_0_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/left_bottom_tile.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cby_0_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/cbx_1_.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/fpga_top.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/bottom_right_tile.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/tile/top_left_tile.v'
+Loading verilog file '/home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/qor_signoff/tt_25C_v1p1/timing_sb/netlist/subblock/direct_interc.v'
+Linking design fpga_top...
+Information: Removing 115 unneeded designs..... (LNK-034)
+Information: 723 (97.83%) library cells are unused in library scc40ulp_uhdc40_hvt_tt_v1p1_25c_basic..... (LNK-045)
+Information: 724 (97.97%) library cells are unused in library scc40ulp_uhdc40_lvt_tt_v1p1_25c_basic..... (LNK-045)
+Information: 607 (82.14%) library cells are unused in library scc40ulp_uhdc40_rvt_tt_v1p1_25c_basic..... (LNK-045)
+Information: total 2054 library cells are unused (LNK-046)
+Warning: Some timing arcs have been disabled for breaking timing loops or because of constant propagation. Use the 'report_disable_timing' command to get the list of these disabled timing arcs. (PTE-003)
+Design 'fpga_top' was successfully linked.
+Information: There are 1674637 leaf cells, ports, hiers and 2684053 nets in the design (LNK-047)
+1
+# Apply the following units
+set_units -time ns
+1
+# Read RC parasitic files
+# Read SDC files
+source /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_sb/sdc/disable_timing.tcl
+1
+1
+source /home/yhjiang/work_space/20260429_issue161/aaee/etc/device/ALKDL/qor_signoff/timing_sb/sdc/enable_sbx_L2_timing.tcl
+# Report timing to file
+set from_pin_group []
+set from_pin_group [add_to_collection ${from_pin_group} [get_pins fpga_core_inst/*tile_1__1_/sb*/chanx_left_in[6]]]
+{"fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[6]"}
+set from_pin_group [add_to_collection ${from_pin_group} [get_pins fpga_core_inst/*tile_1__1_/sb*/chanx_left_in[7]]]
+{"fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[6]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[7]"}
+set from_pin_group [add_to_collection ${from_pin_group} [get_pins fpga_core_inst/*tile_1__1_/sb*/chanx_left_in[8]]]
+{"fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[6]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[7]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[8]"}
+set from_pin_group [add_to_collection ${from_pin_group} [get_pins fpga_core_inst/*tile_1__1_/sb*/chanx_left_in[9]]]
+{"fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[6]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[7]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[8]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[9]"}
+set from_pin_group [add_to_collection ${from_pin_group} [get_pins fpga_core_inst/*tile_1__1_/sb*/chanx_left_in[10]]]
+{"fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[6]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[7]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[8]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[9]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[10]"}
+set from_pin_group [add_to_collection ${from_pin_group} [get_pins fpga_core_inst/*tile_1__1_/sb*/chanx_left_in[11]]]
+{"fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[6]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[7]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[8]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[9]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[10]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[11]"}
+set from_pin_group [add_to_collection ${from_pin_group} [get_pins fpga_core_inst/*tile_1__1_/sb*/chanx_left_in[12]]]
+{"fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[6]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[7]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[8]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[9]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[10]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[11]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[12]"}
+set from_pin_group [add_to_collection ${from_pin_group} [get_pins fpga_core_inst/*tile_1__1_/sb*/chanx_left_in[13]]]
+{"fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[6]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[7]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[8]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[9]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[10]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[11]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[12]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[13]"}
+set from_pin_group [add_to_collection ${from_pin_group} [get_pins fpga_core_inst/*tile_1__1_/sb*/*grid*]]
+{"fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[6]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[7]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[8]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[9]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[10]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[11]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[12]", "fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[13]", "fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_0_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_1_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_2_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_3_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_4_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_5_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_6_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_7_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_8_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_9_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_10_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_11_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_12_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_13_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_14_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_15_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_16_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_17_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_18_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_19_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_20_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_21_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_22_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_23_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_0_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_1_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_2_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_3_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_4_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_5_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_6_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_7_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_8_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_9_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_10_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_11_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_12_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_13_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_14_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_15_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_16_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_17_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_18_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_19_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_20_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_21_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_22_[0]", "fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_23_[0]"}
+set to_pin_group []
+set to_pin_group [add_to_collection ${to_pin_group} [get_pins fpga_core_inst/*tile_3__1_/sb*/chanx_left_in[7]]]
+{"fpga_core_inst/tile_3__1_/sb_1__1_/chanx_left_in[7]"}
+set to_pin_group [add_to_collection ${to_pin_group} [get_pins fpga_core_inst/*tile_3__1_/sb*/chanx_left_in[9]]]
+{"fpga_core_inst/tile_3__1_/sb_1__1_/chanx_left_in[7]", "fpga_core_inst/tile_3__1_/sb_1__1_/chanx_left_in[9]"}
+set to_pin_group [add_to_collection ${to_pin_group} [get_pins fpga_core_inst/*tile_3__1_/sb*/chanx_left_in[11]]]
+{"fpga_core_inst/tile_3__1_/sb_1__1_/chanx_left_in[7]", "fpga_core_inst/tile_3__1_/sb_1__1_/chanx_left_in[9]", "fpga_core_inst/tile_3__1_/sb_1__1_/chanx_left_in[11]"}
+set_max_delay 0 -from ${from_pin_group} -to ${to_pin_group}
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[6]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[7]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[8]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[9]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[10]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[11]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[12]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[13]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_0_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_1_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_2_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_3_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_4_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_5_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_6_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_7_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_8_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_9_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_10_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_11_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_12_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_13_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_14_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_15_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_16_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_17_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_18_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_19_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_20_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_21_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_22_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_23_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_0_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_1_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_2_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_3_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_4_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_5_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_6_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_7_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_8_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_9_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_10_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_11_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_12_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_13_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_14_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_15_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_16_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_17_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_18_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_19_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_20_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_21_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_22_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_23_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_3__1_/sb_1__1_/chanx_left_in[7]' to be a timing endpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_3__1_/sb_1__1_/chanx_left_in[9]' to be a timing endpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_3__1_/sb_1__1_/chanx_left_in[11]' to be a timing endpoint. (UITE-217)
+1
+set_min_delay 100 -from ${from_pin_group} -to ${to_pin_group}
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[6]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[7]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[8]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[9]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[10]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[11]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[12]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/chanx_left_in[13]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_0_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_1_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_2_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_3_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_4_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_5_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_6_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_7_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_8_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_9_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_10_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/top_left_grid_right_width_0_height_0_subtile_0__pin_O_11_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_12_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_13_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_14_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_15_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_16_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_17_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_18_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_19_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_20_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_21_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_22_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/right_bottom_grid_top_width_0_height_0_subtile_0__pin_O_23_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_0_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_1_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_2_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_3_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_4_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_5_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_6_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_7_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_8_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_9_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_10_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/bottom_left_grid_right_width_0_height_0_subtile_0__pin_O_11_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_12_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_13_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_14_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_15_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_16_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_17_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_18_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_19_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_20_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_21_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_22_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_1__1_/sb_1__1_/left_bottom_grid_top_width_0_height_0_subtile_0__pin_O_23_[0]' to be a timing startpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_3__1_/sb_1__1_/chanx_left_in[7]' to be a timing endpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_3__1_/sb_1__1_/chanx_left_in[9]' to be a timing endpoint. (UITE-217)
+Warning: Forcing pin 'fpga_core_inst/tile_3__1_/sb_1__1_/chanx_left_in[11]' to be a timing endpoint. (UITE-217)
+1
+update_timing
+Warning: Some timing arcs have been disabled for breaking timing loops or because of constant propagation. Use the 'report_disable_timing' command to get the list of these disabled timing arcs. (PTE-003)
+Information: Building multi voltage information for entire design. (MV-022)
+
+Timing updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full, 0 logical)
+Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
+Maximum memory usage for this session: 13493.61 MB
+CPU usage for this session: 939 seconds 
+Elapsed time for this session: 421301 seconds
+Elapsed time spent in memory sampling: 0 seconds
+imate/timing/gl/tt_25C_v1p1/fpga_top/sbx_L2_mux.rpt" {
+	report_timing -from ${from_pin_group} -to ${to_pin_group} -path_type full_clock_expanded -delay_type max -nworst 1 -max_paths 1000 -net -input_pins -significant_digits 6 -nosplit -capacitance -transition_time -include_hierarchical_pins
+}
+exec /bin/sh -c "sed -i 's/.*Date.*/--removed--/g' /home/yhjiang/work_space/20260429_issue161/aaee/test/tasks/alkaidL/s40/step_run/_work/alkaid_exto/alkaid_ex_netlist/iter0/reports/ultimate/timing/gl/tt_25C_v1p1/fpga_top/sbx_L2_mux.rpt"
+exit
+Information: Defining new variable 'to_pin_group'. (CMD-041)
+Information: Defining new variable 'wire_len'. (CMD-041)
+Information: Defining new variable 'ix'. (CMD-041)
+Information: Defining new variable 'start_x'. (CMD-041)
+Information: Defining new variable 'end_x'. (CMD-041)
+Information: Defining new variable 'from_pin_group'. (CMD-041)
+
+Timing updates: 1 (0 implicit, 1 explicit) (0 incremental, 1 full, 0 logical)
+Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
+Maximum memory usage for this session: 13545.40 MB
+CPU usage for this session: 1117 seconds 
+Elapsed time for this session: 476 seconds
+Elapsed time spent in memory sampling: 0 seconds
+Diagnostics summary: 120 warnings, 13 informationals
+
+Thank you for using pt_shell!

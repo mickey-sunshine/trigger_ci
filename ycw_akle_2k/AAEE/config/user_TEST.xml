@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='utf-8'?>
+<benchmark_suite>
+  <stamp>
+    <author>RapidFlex</author>
+    <dates>
+      <created>Sat Dec 31 03:14:41 PM PST 2022</created>
+      <last_modified>Sat Dec 31 03:14:41 PM PST 2022</last_modified>
+    </dates>
+    <tool_version>0.0.15-dev+023fa82</tool_version>
+  </stamp>
+
+  <benchmark name="and2_dffr1" suite="user_TEST">
+    <design>
+      <file type="verilog">${PWD}/src/user_TEST/and2_dffr1/and2_dffr1.v</file>
+    </design>
+    <top_module>and2_dffr1</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_TEST/and2_dffr1/test_and2_dffr1.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_TEST/and2_dffr1/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_TEST/and2_dffr1/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_TEST/and2_dffr1/old.pcf</file>
+      <file type="sdc">${PWD}/src/user_TEST/and2_dffr1/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+
+  <benchmark name="and2_dffr_pcf" suite="user_TEST">
+    <design>
+      <file type="verilog">${PWD}/src/user_TEST/and2_dffr_pcf/and2_dffr_pcf.v</file>
+    </design>
+    <top_module>and2_dffr_pcf</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_TEST/and2_dffr_pcf/test_and2_dffr_pcf.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_TEST/and2_dffr_pcf/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_TEST/and2_dffr_pcf/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_TEST/and2_dffr_pcf/auto_gen.pcf</file>
+      <file type="sdc">${PWD}/src/user_TEST/and2_dffr_pcf/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+
+  <benchmark name="and2_dffr_pcf2" suite="user_TEST">
+    <design>
+      <file type="verilog">${PWD}/src/user_TEST/and2_dffr_pcf2/and2_dffr_pcf2.v</file>
+    </design>
+    <top_module>and2_dffr_pcf2</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_TEST/and2_dffr_pcf2/test_and2_dffr_pcf2.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_TEST/and2_dffr_pcf2/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_TEST/and2_dffr_pcf2/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_TEST/and2_dffr_pcf2/old.pcf</file>
+      <file type="sdc">${PWD}/src/user_TEST/and2_dffr_pcf2/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+
+  <benchmark name="c2k_CLB_2" suite="user_TEST">
+    <design>
+      <file type="verilog">${PWD}/src/user_TEST/c2k_CLB_2/c2k_CLB.v</file>
+    </design>
+    <top_module>c2k_CLB</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_TEST/c2k_CLB_2/test_c2k_CLB.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_TEST/c2k_CLB_2/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_TEST/c2k_CLB_2/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_TEST/c2k_CLB_2/auto_gen.pcf</file>
+      <file type="sdc">${PWD}/src/user_TEST/c2k_CLB_2/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+
+  <benchmark name="c2k_SR_PWM_ccb" suite="user_TEST">
+    <design>
+      <file type="verilog">${PWD}/src/user_TEST/c2k_SR_PWM_ccb/rf_pulse_gen.v</file>
+      <file type="verilog">${PWD}/src/user_TEST/c2k_SR_PWM_ccb/sr_fsm.v</file>
+      <file type="verilog">${PWD}/src/user_TEST/c2k_SR_PWM_ccb/c2k_SR_PWM_ccb.v</file>
+    </design>
+    <top_module>c2k_SR_PWM_ccb</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_TEST/c2k_SR_PWM_ccb/test_c2k_SR_PWM_ccb.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_TEST/c2k_SR_PWM_ccb/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_TEST/c2k_SR_PWM_ccb/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_TEST/c2k_SR_PWM_ccb/auto_gen.pcf</file>
+      <file type="sdc">${PWD}/src/user_TEST/c2k_SR_PWM_ccb/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+
+  <benchmark name="local_clk_test1" suite="user_TEST">
+    <design>
+      <file type="verilog">${PWD}/src/user_TEST/local_clk_test/local_clk_test.v</file>
+    </design>
+    <top_module>local_clk_test</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_TEST/local_clk_test/test_local_clk_test.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_TEST/local_clk_test/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_TEST/local_clk_test/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_TEST/local_clk_test1/auto_gen.pcf</file>
+      <file type="sdc">${PWD}/src/user_TEST/local_clk_test1/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+
+</benchmark_suite>

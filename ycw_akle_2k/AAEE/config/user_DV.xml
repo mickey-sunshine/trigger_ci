@@ -1,0 +1,388 @@
+<?xml version='1.0' encoding='utf-8'?>
+<benchmark_suite>
+  <stamp>
+    <author>RapidFlex</author>
+    <dates>
+      <created>Sat Dec 31 03:14:41 PM PST 2022</created>
+      <last_modified>Sat Dec 31 03:14:41 PM PST 2022</last_modified>
+    </dates>
+    <tool_version>0.0.15-dev+023fa82</tool_version>
+  </stamp>
+  <benchmark name="ae_case1" suite="user_DV">
+    <design>
+      <file type="verilog">${PWD}/src/user_DV/ae_case1/ae_case1.v</file>
+      <file type="verilog">${PWD}/src/user_DV/ae_case1/rf_pulse_gen.v</file>
+      <file type="verilog">${PWD}/src/user_DV/ae_case1/sr_fsm.v</file>
+    </design>
+    <top_module>ae_case1</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_DV/ae_case1/test_ae_case1.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_DV/ae_case1/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_DV/ae_case1/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_DV/ae_case1/old.pcf</file>
+      <file type="sdc">${PWD}/src/user_DV/ae_case1/sdc.sdc</file>
+    </constraints>
+  </benchmark>
+  <benchmark name="ae_case2" suite="user_DV">
+    <design>
+      <file type="verilog">${PWD}/src/user_DV/ae_case2/ae_case2.v</file>
+      <file type="verilog">${PWD}/src/user_DV/ae_case2/edge_detection.v</file>
+      <file type="verilog">${PWD}/src/user_DV/ae_case2/off_pwm_ctrl.v</file>
+      <file type="verilog">${PWD}/src/user_DV/ae_case2/off_pwm_mode_ctrl.v</file>
+      <file type="verilog">${PWD}/src/user_DV/ae_case2/off_pwm_sel.v</file>
+      <file type="verilog">${PWD}/src/user_DV/ae_case2/signal_dly_ctrl.v</file>
+      <file type="verilog">${PWD}/src/user_DV/ae_case2/pwm_protection_g1p6_16b.v</file>
+    </design>
+    <top_module>ae_case2</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_DV/ae_case2/test_ae_case2.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_DV/ae_case2/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_DV/ae_case2/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_DV/ae_case2/old.pcf</file>
+      <file type="sdc">${PWD}/src/user_DV/ae_case2/sdc.sdc</file>
+    </constraints>
+  </benchmark>
+  <benchmark name="ae_case3" suite="user_DV">
+    <design>
+      <file type="verilog">${PWD}/src/user_DV/ae_case3/ae_case3_edge_detection.v</file>
+      <file type="verilog">${PWD}/src/user_DV/ae_case3/ae_case3_off_pwm_ctrl.v</file>
+      <file type="verilog">${PWD}/src/user_DV/ae_case3/ae_case3_off_pwm_mode_ctrl.v</file>
+      <file type="verilog">${PWD}/src/user_DV/ae_case3/ae_case3_off_pwm_sel.v</file>
+      <file type="verilog">${PWD}/src/user_DV/ae_case3/ae_case3.v</file>
+      <file type="verilog">${PWD}/src/user_DV/ae_case3/sig_off_g1p6.v</file>
+    </design>
+    <top_module>ae_case3</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_DV/ae_case3/test_ae_case3.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_DV/ae_case3/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_DV/ae_case3/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_DV/ae_case3/old.pcf</file>
+      <file type="sdc">${PWD}/src/user_DV/ae_case3/sdc.sdc</file>
+    </constraints>
+  </benchmark>
+  <benchmark name="and2_latch_rstn" suite="user_DV">
+    <design>
+      <file type="verilog">${PWD}/src/user_DV/and2_latch_rstn/and2_latch_rstn.v</file>
+    </design>
+    <top_module>and2_latch_rstn</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_DV/and2_latch_rstn/test_and2_latch_rstn.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_DV/and2_latch_rstn/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_DV/and2_latch_rstn/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_DV/and2_latch_rstn/old.pcf</file>
+      <file type="sdc">${PWD}/src/user_DV/and2_latch_rstn/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+  <benchmark name="and2_latch_rstp" suite="user_DV">
+    <design>
+      <file type="verilog">${PWD}/src/user_DV/and2_latch_rstp/and2_latch_rstp.v</file>
+    </design>
+    <top_module>and2_latch_rstp</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_DV/and2_latch_rstp/test_and2_latch_rstp.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_DV/and2_latch_rstp/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_DV/and2_latch_rstp/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_DV/and2_latch_rstp/old.pcf</file>
+      <file type="sdc">${PWD}/src/user_DV/and2_latch_rstp/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+  <benchmark name="and2_latch_wdt" suite="user_DV">
+    <design>
+      <file type="verilog">${PWD}/src/user_DV/and2_latch_wdt/and2_latch_wdt.v</file>
+    </design>
+    <top_module>and2_latch_wdt</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_DV/and2_latch_wdt/test_and2_latch_wdt.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_DV/and2_latch_wdt/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_DV/and2_latch_wdt/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_DV/and2_latch_wdt/old.pcf</file>
+      <file type="sdc">${PWD}/src/user_DV/and2_latch_wdt/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+  <benchmark name="ccb_ECAP" suite="user_DV">
+    <design>
+      <file type="verilog">${PWD}/src/user_DV/ccb_ECAP/ccb_ECAP.v</file>
+    </design>
+    <top_module>ccb_ECAP</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_DV/ccb_ECAP/test_ccb_ECAP.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_DV/ccb_ECAP/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_DV/ccb_ECAP/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_DV/ccb_ECAP/old.pcf</file>
+      <file type="sdc">${PWD}/src/user_DV/ccb_ECAP/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+  <benchmark name="ccb_EQEP" suite="user_DV">
+    <design>
+      <file type="verilog">${PWD}/src/user_DV/ccb_EQEP/ccb_EQEP.v</file>
+    </design>
+    <top_module>ccb_EQEP</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_DV/ccb_EQEP/test_ccb_EQEP.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_DV/ccb_EQEP/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_DV/ccb_EQEP/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_DV/ccb_EQEP/old.pcf</file>
+      <file type="sdc">${PWD}/src/user_DV/ccb_EQEP/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+  <benchmark name="ccb_mult_clk_rst" suite="user_DV">
+    <design>
+      <file type="verilog">${PWD}/src/user_DV/ccb_mult_clk_rst/ccb_mult_clk_rst.v</file>
+    </design>
+    <top_module>ccb_mult_clk_rst</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_DV/ccb_mult_clk_rst/test_ccb_mult_clk_rst.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_DV/ccb_mult_clk_rst/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_DV/ccb_mult_clk_rst/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_DV/ccb_mult_clk_rst/old.pcf</file>
+      <file type="sdc">${PWD}/src/user_DV/ccb_mult_clk_rst/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+  <benchmark name="ccb_single_8instra_pcnt32_sync" suite="user_DV">
+    <design>
+      <file type="verilog">${PWD}/src/user_DV/ccb_single_8instra_pcnt32_sync/ccb_single_8instra_pcnt32_sync.v</file>
+    </design>
+    <top_module>ccb_single_8instra_pcnt32_sync</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_DV/ccb_single_8instra_pcnt32_sync/test_ccb_single_8instra_pcnt32_sync.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_DV/ccb_single_8instra_pcnt32_sync/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_DV/ccb_single_8instra_pcnt32_sync/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_DV/ccb_single_8instra_pcnt32_sync/old.pcf</file>
+      <file type="sdc">${PWD}/src/user_DV/ccb_single_8instra_pcnt32_sync/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+  <benchmark name="ccb_single_8instra_pcnt32_async" suite="user_DV">
+    <design>
+      <file type="verilog">${PWD}/src/user_DV/ccb_single_8instra_pcnt32_async/ccb_single_8instra_pcnt32_async.v</file>
+    </design>
+    <top_module>ccb_single_8instra_pcnt32_async</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_DV/ccb_single_8instra_pcnt32_async/test_ccb_single_8instra_pcnt32_async.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_DV/ccb_single_8instra_pcnt32_async/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_DV/ccb_single_8instra_pcnt32_async/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_DV/ccb_single_8instra_pcnt32_async/old.pcf</file>
+      <file type="sdc">${PWD}/src/user_DV/ccb_single_8instra_pcnt32_async/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+  <benchmark name="ccb_tile_ahb_access" suite="user_DV">
+    <design>
+      <file type="verilog">${PWD}/src/user_DV/ccb_tile_ahb_access/ccb_tile_ahb_access.v</file>
+    </design>
+    <top_module>ccb_tile_ahb_access</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_DV/ccb_tile_ahb_access/test_ccb_tile_ahb_access.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_DV/ccb_tile_ahb_access/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_DV/ccb_tile_ahb_access/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_DV/ccb_tile_ahb_access/old.pcf</file>
+      <file type="sdc">${PWD}/src/user_DV/ccb_tile_ahb_access/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+  <benchmark name="ccb_UART_PWM" suite="user_DV">
+    <design>
+      <file type="verilog">${PWD}/src/user_DV/ccb_UART_PWM/uart_top.v</file>
+      <file type="verilog">${PWD}/src/user_DV/ccb_UART_PWM/uart_transmitter.v</file>
+      <file type="verilog">${PWD}/src/user_DV/ccb_UART_PWM/uart_receiver.v</file>
+      <file type="verilog">${PWD}/src/user_DV/ccb_UART_PWM/baud_rate_generator.v</file>
+      <file type="verilog">${PWD}/src/user_DV/ccb_UART_PWM/ccb_UART_PWM.v</file>
+    </design>
+    <top_module>ccb_UART_PWM</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_DV/ccb_UART_PWM/test_ccb_UART_PWM.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_DV/ccb_UART_PWM/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_DV/ccb_UART_PWM/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_DV/ccb_UART_PWM/old.pcf</file>
+      <file type="sdc">${PWD}/src/user_DV/ccb_UART_PWM/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+  <benchmark name="cnt32_add_sub_shift" suite="user_DV">
+    <design>
+      <file type="verilog">${PWD}/src/user_DV/cnt32_add_sub_shift/cnt32_add_sub_shift.v</file>
+    </design>
+    <top_module>cnt32_add_sub_shift</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_DV/cnt32_add_sub_shift/test_cnt32_add_sub_shift.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_DV/cnt32_add_sub_shift/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_DV/cnt32_add_sub_shift/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_DV/cnt32_add_sub_shift/auto_gen.pcf</file>
+      <file type="sdc">${PWD}/src/user_DV/cnt32_add_sub_shift/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+  <benchmark name="cnt32_clkpn_rstas" suite="user_DV">
+    <design>
+      <file type="verilog">${PWD}/src/user_DV/cnt32_clkpn_rstas/cnt32_clkpn_rstas.v</file>
+    </design>
+    <top_module>cnt32_clkpn_rstas</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_DV/cnt32_clkpn_rstas/test_cnt32_clkpn_rstas.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_DV/cnt32_clkpn_rstas/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_DV/cnt32_clkpn_rstas/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_DV/cnt32_clkpn_rstas/auto_gen.pcf</file>
+      <file type="sdc">${PWD}/src/user_DV/cnt32_clkpn_rstas/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+  <benchmark name="wdt_pwm" suite="user_DV">
+    <design>
+      <file type="verilog">${PWD}/src/user_DV/wdt_pwm/wdt_pwm.v</file>
+    </design>
+    <top_module>wdt_pwm</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_DV/wdt_pwm/test_wdt_pwm.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_DV/wdt_pwm/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_DV/wdt_pwm/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_DV/wdt_pwm/old.pcf</file>
+      <file type="sdc">${PWD}/src/user_DV/wdt_pwm/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+  <benchmark name="ccb_single_32instra" suite="user_DV">
+    <design>
+      <file type="verilog">${PWD}/src/user_DV/ccb_single_32instra/ccb_single_32instra.v</file>
+    </design>
+    <top_module>ccb_single_32instra</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_DV/ccb_single_32instra/test_ccb_single_32instra.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_DV/ccb_single_32instra/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_DV/ccb_single_32instra/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_DV/ccb_single_32instra/auto_gen.pcf</file>
+      <file type="sdc">${PWD}/src/user_DV/ccb_single_32instra/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+  <benchmark name="cnt32_srst_clkn" suite="user_DV">
+    <design>
+      <file type="verilog">${PWD}/src/user_DV/cnt32_srst_clkn/cnt32_srst_clkn.v</file>
+    </design>
+    <top_module>cnt32_srst_clkn</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_DV/cnt32_srst_clkn/test_cnt32_srst_clkn.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_DV/cnt32_srst_clkn/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_DV/cnt32_srst_clkn/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_DV/cnt32_srst_clkn/auto_gen.pcf</file>
+      <file type="sdc">${PWD}/src/user_DV/cnt32_srst_clkn/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+  <benchmark name="cnt16_rst_clk" suite="user_DV">
+    <design>
+      <file type="verilog">${PWD}/src/user_DV/cnt16_rst_clk/cnt16_rst_clk.v</file>
+    </design>
+    <top_module>cnt16_rst_clk</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_DV/cnt16_rst_clk/test_cnt16_rst_clk.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_DV/cnt16_rst_clk/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_DV/cnt16_rst_clk/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_DV/cnt16_rst_clk/auto_gen.pcf</file>
+      <file type="sdc">${PWD}/src/user_DV/cnt16_rst_clk/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+  <benchmark name="ccb_parallel_event" suite="user_DV">
+    <design>
+      <file type="verilog">${PWD}/src/user_DV/ccb_parallel_event/ccb_parallel_event.v</file>
+    </design>
+    <top_module>ccb_parallel_event</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_DV/ccb_parallel_event/test_ccb_parallel_event.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_DV/ccb_parallel_event/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_DV/ccb_parallel_event/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_DV/ccb_parallel_event/auto_gen.pcf</file>
+      <file type="sdc">${PWD}/src/user_DV/ccb_parallel_event/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+  <benchmark name="ccb_instr_instruction" suite="user_DV">
+    <design>
+      <file type="verilog">${PWD}/src/user_DV/ccb_instr_instruction/ccb_instr_instruction.v</file>
+    </design>
+    <top_module>ccb_instr_instruction</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_DV/ccb_instr_instruction/test_ccb_instr_instruction.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_DV/ccb_instr_instruction/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_DV/ccb_instr_instruction/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_DV/ccb_instr_instruction/auto_gen.pcf</file>
+      <file type="sdc">${PWD}/src/user_DV/ccb_instr_instruction/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+  <benchmark name="and2_latch_wdt_maxdiv" suite="user_DV">
+    <design>
+      <file type="verilog">${PWD}/src/user_DV/and2_latch_wdt_maxdiv/and2_latch_wdt_maxdiv.v</file>
+    </design>
+    <top_module>and2_latch_wdt_maxdiv</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_DV/and2_latch_wdt_maxdiv/test_and2_latch_wdt_maxdiv.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_DV/and2_latch_wdt_maxdiv/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_DV/and2_latch_wdt_maxdiv/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_DV/and2_latch_wdt_maxdiv/old.pcf</file>
+      <file type="sdc">${PWD}/src/user_DV/and2_latch_wdt_maxdiv/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+  <benchmark name="ccb_keep" suite="user_DV">
+    <design>
+      <file type="verilog">${PWD}/src/user_DV/ccb_keep/ccb_keep.v</file>
+    </design>
+    <top_module>ccb_keep</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_DV/ccb_keep/test_ccb_keep.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_DV/ccb_keep/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_DV/ccb_keep/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_DV/ccb_keep/auto_gen.pcf</file>
+      <file type="sdc">${PWD}/src/user_DV/ccb_keep/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+  <benchmark name="ccb_4event" suite="user_DV">
+    <design>
+      <file type="verilog">${PWD}/src/user_DV/ccb_4event/ccb_4event.v</file>
+    </design>
+    <top_module>ccb_4event</top_module>
+    <cocotb>
+      <file type="top">${PWD}/../testbench/src/user_DV/ccb_4event/test_ccb_4event.py</file>
+      <file type="makefile">${PWD}/../testbench/src/user_DV/ccb_4event/Makefile</file>
+    </cocotb>
+    <constraints>
+      <file type="pcf_gclk">${PWD}/src/user_DV/ccb_4event/pcf_gclk.xml</file>
+      <file type="pcf">${PWD}/src/user_DV/ccb_4event/auto_gen.pcf</file>
+      <file type="sdc">${PWD}/src/user_DV/ccb_4event/auto_gen.sdc</file>
+    </constraints>
+  </benchmark>
+</benchmark_suite>

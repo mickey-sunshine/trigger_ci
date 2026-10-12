@@ -1,0 +1,38 @@
+# Always use the LEFT_0_IN[0] as the pad for AlkaiD devices
+# Set the polarity of the reset. The mode can be LOW_ACTIVE or HIGH_ACTIVE
+set_fabric_rst_pol -pad LEFT_0_IN[0] -mode LOW_ACTIVE
+
+# Set the delay number for the two clock delay chains. Range from 0.00ns
+#to 15.30ns. Minimum delay step is 0.06ns. Must include units and 2 digits
+#in precision, e.g. 0.48ns
+set_clk0_delay_chain -pad LEFT_0_IN[0] -delay 6.48ns
+set_clk1_delay_chain -pad LEFT_0_IN[0] -delay 12.96ns
+
+# Mode can be [COUNTER|PWM]. Status can be [ENABLE|DISABLE]
+set_watchdog_operating_mode -pad LEFT_0_IN[0] -mode COUNTER -status ENABLE
+
+# The following command is only available for COUNTER mode. The value ranges
+#from [0, 16777215]. If you have selected the PWM mode, this command will cause
+#malfunction in watchdog operation.
+set_watchdog_counter -pad LEFT_0_IN[0] -value 12345678
+
+# The value ranges from [0, 4095]
+set_watchdog_clock_divider -pad LEFT_0_IN[0] -status ENABLE -value 3210
+
+
+# EFPGA Port Management Stack Port
+# 0b1       [0:0]     FPGA_RST_POL
+# 0x6C      [1:8]     Clk0 delay chain
+# 0xD8      [9:16]    Clk1 delay chain
+# 0b0       [17:17]   Watchdog MODE_SEL_I
+# 0b1       [18:18]   Watchdog WDT_EN_I
+# 0x14E     [19:30]   LOGIC_L_V_I
+# 0xBC6     [31:42]   LOGIC_H_V_I
+# 0b1       [43:43]   CLK_DIV_EN_I
+# 0xC8A     [44:55]   CLK_DIV_VALUE_I
+
+set_io rst_ni LEFT_1_IN[1]
+set_io a TOP_2_IN[0]
+set_io b TOP_2_IN[2]
+set_io c TOP_0_OUT[0]
+set_io d TOP_0_OUT[2]

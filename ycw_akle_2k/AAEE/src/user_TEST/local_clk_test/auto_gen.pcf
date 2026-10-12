@@ -1,0 +1,7 @@
+set_io   A_i           TOP_0_IN[0] 	#gfpga_pad_pinput_A2F[0]
+set_io   B_i           TOP_0_IN[1] 	#gfpga_pad_pinput_A2F[1]
+set_io   C_o           TOP_0_OUT[0] 	#gfpga_pad_poutput_F2A[0]
+set_io   C_local_clk_o TOP_0_OUT[1] 	#gfpga_pad_poutput_F2A[1]
+set_io   C_local_rst_o TOP_0_OUT[2] 	#gfpga_pad_poutput_F2A[2]
+set_io   clk_i         TOP_0_IN[2] 	#gfpga_pad_pinput_A2F[2]
+set_io   rst_ni        TOP_0_IN[3] 	#gfpga_pad_pinput_A2F[3]

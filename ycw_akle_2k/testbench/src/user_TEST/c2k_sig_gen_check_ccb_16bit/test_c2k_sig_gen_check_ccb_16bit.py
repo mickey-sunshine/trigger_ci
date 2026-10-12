@@ -1,0 +1,170 @@
+# import random
+import cocotb
+from cocotb.clock import Clock
+from cocotb.triggers import Timer, Event, First
+
+# from cocotb.triggers import RisingEdge, FallingEdge
+from cocotb.types import LogicArray, Logic
+from cocotb.handle import Force, Release
+from cocotb.triggers import ValueChange
+
+
+async def RisingEdge(signal):
+    await ValueChange(signal)
+    # if not rising edge, keep waiting
+    while signal.value != 1:
+        await ValueChange(signal)
+
+
+async def FallingEdge(signal):
+    await ValueChange(signal)
+    # if not falling edge, keep waiting
+    while signal.value != 0:
+        await ValueChange(signal)
+
+
+DEBUG_MODE = 0
+
+
+def custom_assert(condition, message="Assertion failed"):
+    """
+    自定义断言函数，根据 DEBUG_MODE 行为不同：
+    - 调试模式：记录错误但不中断进程
+    - 普通模式：抛出异常中断程序
+    """
+    if not condition:
+        if DEBUG_MODE == 1:
+            # 调试模式下，只记录错误并继续
+            cocotb.log.error(f"Error (DEBUG MODE): {message}")
+        else:
+            # 普通模式下，中断程序
+            raise AssertionError(message)
+
+
+class TB:
+    """testbench 类"""
+
+    def __init__(self, dut):
+        # 调试模式标志 - 可以通过环境变量设置
+        self.dut = dut
+        cocotb.start_soon(self.timeout())
+
+    async def timeout(self, timeout_time=400000):
+        """超时函数"""
+        await Timer(timeout_time, "ns")
+        raise TimeoutError("Timeout")
+
+    async def reset_dut(self):
+        """复位DUT"""
+        self.dut.rst_ni.value = 0
+        await Timer(20, "ns")
+        self.dut.rst_ni.value = 1
+        await Timer(20, "ns")
+        cocotb.log.info("DUT reset completed")
+
+    async def setup_clock(self):
+        """设置时钟信号"""
+        clock = Clock(self.dut.clk_i, 10, "ns")  # 100MHz时钟
+        cocotb.start_soon(clock.start())
+        await Timer(1, "ns")  # 让时钟稳定
+
+    async def wait_clocks(self, num_clocks):
+        """等待指定数量的时钟周期"""
+        for _ in range(num_clocks):
+            await RisingEdge(self.dut.clk_i)
+        await Timer(1, "ns")  # 错开时钟沿
+        return 0
+
+
+async def interrupt_dect(tb, signal, num_clocks):
+    """中断检测功能,
+    在num_clocks个时钟周期内不会触发中断"""
+    task1 = cocotb.start_soon(tb.wait_clocks(num_clocks))
+    task2 = cocotb.start_soon(RisingEdge(signal))
+    result1 = await First(task1, task2)
+
+    # 如果在预计的周期到来之前触发了中断, 则报错
+    custom_assert(result1 == 0, f"Unexpected Interrupt detected, return{result1}")
+
+
+@cocotb.test()
+async def test_c2k_sig_gen_check_ccb_16bit(dut):
+    """信号生成和检查测试"""
+    cocotb.log.info("Starting signal test")
+
+    tb = TB(dut)
+
+    # 初始化输入为低电平
+    dut.clk_i.value = 0
+    dut.rst_ni.value = 0
+    dut.event_ccb.value = 0
+    # 启动时钟, 初始复位
+    await tb.setup_clock()
+    await tb.reset_dut()
+
+    # 正常pwm波形, 无中断产生
+    cocotb.log.info("Starting normal signal test")
+    await interrupt_dect(tb, dut.interrupt_o1, 800)
+    await interrupt_dect(tb, dut.interrupt_o2, 800)
+
+    # 强制pwm波形的占空比超出设定值
+    cocotb.log.info("Starting interrupt_o1 test")
+    dut.pwm_out.value = Force(0)
+    await interrupt_dect(tb, dut.interrupt_o1, 200)
+    dut.pwm_out.value = Force(1)
+    await interrupt_dect(tb, dut.interrupt_o1, 299)
+    await tb.wait_clocks(1)
+    custom_assert(dut.interrupt_o1.value == 1, "interrupt_o1 test1 fail")
+    await interrupt_dect(
+        tb, dut.interrupt_o1, 301
+    )  # pcnt的reset信号将会延迟1个周期, 所以会多一个等待周期
+    await tb.wait_clocks(1)
+    custom_assert(dut.interrupt_o1.value == 1, "interrupt_o1 test2 fail")
+
+    # 强制pwm波形的周期超出设定值
+    cocotb.log.info("Starting interrupt_o2 test")
+    dut.pwm_out.value = Force(0)
+    await interrupt_dect(tb, dut.interrupt_o2, 300)
+    dut.pwm_out.value = Force(1)
+    await interrupt_dect(tb, dut.interrupt_o2, 200)
+    await tb.wait_clocks(1)
+    custom_assert(dut.interrupt_o2.value == 1, "interrupt_o2 test1 fail")
+
+    dut.pwm_out.value = Force(0)
+    await interrupt_dect(tb, dut.interrupt_o2, 199)
+    dut.pwm_out.value = Force(1)
+    await interrupt_dect(
+        tb, dut.interrupt_o2, 301
+    )  # pcnt的reset信号将会延迟1个周期, 所以会多一个等待周期
+    await tb.wait_clocks(1)
+    custom_assert(dut.interrupt_o2.value == 1, "interrupt_o2 test2 fail")
+
+    # 正常pwm波形, 无中断产生
+    dut.pwm_out.value = Release()
+    cocotb.log.info("Starting normal signal test2")
+    await interrupt_dect(tb, dut.interrupt_o1, 800)
+    await interrupt_dect(tb, dut.interrupt_o2, 800)
+
+    cocotb.log.info("PCNT test1 finished, now starting CCB test")
+    dut.event_ccb.value = LogicArray(0b0100, 4)
+    await tb.wait_clocks(1)
+    dut.event_ccb.value = 0
+    await tb.wait_clocks(6)  # 等待ccb执行
+    await interrupt_dect(tb, dut.interrupt_o1, 99)
+    for i in range(3):
+        await tb.wait_clocks(1)
+        custom_assert(dut.interrupt_o1.value == 1, "interrupt_o1 test1 after value change fail")
+        custom_assert(dut.interrupt_o2.value == 0, "interrupt_o2 test1 after value change fail")
+        await interrupt_dect(tb, dut.interrupt_o2, 50)
+        await tb.wait_clocks(1)
+        custom_assert(dut.interrupt_o1.value == 0, "interrupt_o1 test2 after value change fail")
+        custom_assert(dut.interrupt_o2.value == 1, "interrupt_o2 test2 after value change fail")
+        await interrupt_dect(tb, dut.interrupt_o1, 349)
+    cocotb.log.info("CCB config PCNT test finished")
+    await tb.wait_clocks(100)
+
+
+# 测试运行器入口点
+if __name__ == "__main__":
+    print("CocoTB testbench for c2k_sig_gen_check_ccb_16bit module")
+    print("Run with: cocotb")
